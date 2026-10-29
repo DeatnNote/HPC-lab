@@ -1,0 +1,6 @@
+bin/
+results/work/
+dashboard/node_modules/
+dashboard/dist/
+__pycache__/
+.pytest_cache/

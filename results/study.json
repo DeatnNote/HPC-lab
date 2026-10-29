@@ -1,0 +1,309 @@
+{
+  "train_seeds": [
+    0,
+    1,
+    2
+  ],
+  "test_seeds": [
+    3,
+    4,
+    5,
+    6,
+    7
+  ],
+  "test_incidents": 100,
+  "test_days": 35.0,
+  "test_incidents_by_kind": {
+    "fan": 30,
+    "dimm": 30,
+    "switch": 20,
+    "ost": 20
+  },
+  "detection": {
+    "static": {
+      "false_pages_per_day": 0.45714285714285713,
+      "recall": 0.64,
+      "by_kind": {
+        "dimm": {
+          "incidents": 30,
+          "recall": 1.0,
+          "median_delay_min": 371.5
+        },
+        "fan": {
+          "incidents": 30,
+          "recall": 0.0,
+          "median_delay_min": null
+        },
+        "ost": {
+          "incidents": 20,
+          "recall": 1.0,
+          "median_delay_min": 2.0
+        },
+        "switch": {
+          "incidents": 20,
+          "recall": 0.7,
+          "median_delay_min": 11.0
+        }
+      },
+      "crashes": 58,
+      "crashes_warned": 0.5172413793103449,
+      "median_lead_before_crash_min": 178.0,
+      "threshold": 1.0775469123851114,
+      "train_false_pages_per_day": 0.7619047619047619
+    },
+    "rolling_z": {
+      "false_pages_per_day": 0.7714285714285715,
+      "recall": 0.25,
+      "by_kind": {
+        "dimm": {
+          "incidents": 30,
+          "recall": 0.06666666666666667,
+          "median_delay_min": 261.5
+        },
+        "fan": {
+          "incidents": 30,
+          "recall": 0.0,
+          "median_delay_min": null
+        },
+        "ost": {
+          "incidents": 20,
+          "recall": 0.95,
+          "median_delay_min": 2.0
+        },
+        "switch": {
+          "incidents": 20,
+          "recall": 0.2,
+          "median_delay_min": 4.5
+        }
+      },
+      "crashes": 58,
+      "crashes_warned": 0.034482758620689655,
+      "median_lead_before_crash_min": 395.5,
+      "threshold": 15.754891345895444,
+      "train_false_pages_per_day": 0.7142857142857143
+    },
+    "iforest": {
+      "false_pages_per_day": 0.5714285714285714,
+      "recall": 0.26,
+      "by_kind": {
+        "dimm": {
+          "incidents": 30,
+          "recall": 0.6,
+          "median_delay_min": 436.5
+        },
+        "fan": {
+          "incidents": 30,
+          "recall": 0.06666666666666667,
+          "median_delay_min": 91.0
+        },
+        "ost": {
+          "incidents": 20,
+          "recall": 0.1,
+          "median_delay_min": 35.5
+        },
+        "switch": {
+          "incidents": 20,
+          "recall": 0.2,
+          "median_delay_min": 32.0
+        }
+      },
+      "crashes": 58,
+      "crashes_warned": 0.3448275862068966,
+      "median_lead_before_crash_min": 148.0,
+      "threshold": 0.6817344561678971,
+      "train_false_pages_per_day": 0.7142857142857143
+    },
+    "residual": {
+      "false_pages_per_day": 0.05714285714285714,
+      "recall": 0.96,
+      "by_kind": {
+        "dimm": {
+          "incidents": 30,
+          "recall": 1.0,
+          "median_delay_min": 265.0
+        },
+        "fan": {
+          "incidents": 30,
+          "recall": 0.8666666666666667,
+          "median_delay_min": 86.0
+        },
+        "ost": {
+          "incidents": 20,
+          "recall": 1.0,
+          "median_delay_min": 2.0
+        },
+        "switch": {
+          "incidents": 20,
+          "recall": 1.0,
+          "median_delay_min": 3.0
+        }
+      },
+      "crashes": 58,
+      "crashes_warned": 0.9310344827586207,
+      "median_lead_before_crash_min": 228.5,
+      "threshold": 13.671286417906781,
+      "train_false_pages_per_day": 0.0
+    }
+  },
+  "forecast": {
+    "pr_auc_lgbm": 0.7765200308178817,
+    "pr_auc_rule": 0.6579206156729057,
+    "positive_rate": 0.0010803846541915353,
+    "templates": [
+      "<*> launch task <*> request from <*>",
+      "<*> session opened for user <*>",
+      "<*> synchronized to <*>, stratum <*>",
+      "LustreError: 11-0: <*> operation ost_write to node <*> failed: rc = <*>",
+      "LustreError: <*> @@@ Request sent has timed out for slow reply: <*>",
+      "RAS KERNEL INFO instruction cache parity error corrected",
+      "ipmi: fan <*> speed <*> RPM below lower critical threshold",
+      "kernel: <*> Core temperature above threshold, cpu clock throttled (total events = <*>",
+      "kernel: CPU0: Package temperature above threshold, cpu clock throttled; shutting down",
+      "kernel: EDAC MC0: <*> CE memory read error on <*>",
+      "kernel: Kernel panic - not syncing: Fatal machine check",
+      "kernel: mlx5_core <*> Port module event: module <*> Cable plugged",
+      "kernel: mlx5_core <*> ib0: link down, retraining (CRC errors <*>",
+      "kernel: nfs: server <*> OK"
+    ],
+    "rule": {
+      "crashes": 58,
+      "warned": 0.9655172413793104,
+      "median_lead_min": 282.0,
+      "false_alarms_per_day": 1.3142857142857143,
+      "threshold": 3.447264023702189,
+      "train": {
+        "crashes": 34,
+        "warned": 1.0,
+        "median_lead_min": 293.0,
+        "false_alarms_per_day": 0.9047619047619048
+      },
+      "by_kind": {
+        "fan": {
+          "crashes": 28,
+          "warned": 0.9285714285714286,
+          "median_lead_min": 124.0
+        },
+        "dimm": {
+          "crashes": 30,
+          "warned": 1.0,
+          "median_lead_min": 413.5
+        }
+      }
+    },
+    "lgbm": {
+      "crashes": 58,
+      "warned": 1.0,
+      "median_lead_min": 189.0,
+      "false_alarms_per_day": 0.8,
+      "threshold": 0.02978604653305117,
+      "train": {
+        "crashes": 34,
+        "warned": 1.0,
+        "median_lead_min": 187.0,
+        "false_alarms_per_day": 1.0
+      },
+      "by_kind": {
+        "fan": {
+          "crashes": 28,
+          "warned": 1.0,
+          "median_lead_min": 134.5
+        },
+        "dimm": {
+          "crashes": 30,
+          "warned": 1.0,
+          "median_lead_min": 223.5
+        }
+      }
+    },
+    "top_features": [
+      {
+        "feature": "util",
+        "importance": 557
+      },
+      {
+        "feature": "z_iowait",
+        "importance": 423
+      },
+      {
+        "feature": "z_power",
+        "importance": 417
+      },
+      {
+        "feature": "z_temp_trend30",
+        "importance": 401
+      },
+      {
+        "feature": "z_temp",
+        "importance": 345
+      },
+      {
+        "feature": "z_retrans",
+        "importance": 330
+      },
+      {
+        "feature": "log_ecc120",
+        "importance": 320
+      },
+      {
+        "feature": "tmpl_6",
+        "importance": 309
+      }
+    ]
+  },
+  "rca": {
+    "single_node": {
+      "groups": 111,
+      "accuracy": 0.4864864864864865,
+      "kind_accuracy": 0.972972972972973,
+      "by_truth": {
+        "benign": {
+          "n": 2,
+          "accuracy": 0.0
+        },
+        "dimm": {
+          "n": 29,
+          "accuracy": 0.9655172413793104
+        },
+        "fan": {
+          "n": 26,
+          "accuracy": 1.0
+        },
+        "ost": {
+          "n": 35,
+          "accuracy": 0.0
+        },
+        "switch": {
+          "n": 19,
+          "accuracy": 0.0
+        }
+      }
+    },
+    "topology": {
+      "groups": 111,
+      "accuracy": 0.918918918918919,
+      "kind_accuracy": 0.9369369369369369,
+      "by_truth": {
+        "benign": {
+          "n": 2,
+          "accuracy": 0.0
+        },
+        "dimm": {
+          "n": 29,
+          "accuracy": 0.9310344827586207
+        },
+        "fan": {
+          "n": 26,
+          "accuracy": 0.9615384615384616
+        },
+        "ost": {
+          "n": 35,
+          "accuracy": 0.9142857142857143
+        },
+        "switch": {
+          "n": 19,
+          "accuracy": 0.9473684210526315
+        }
+      }
+    }
+  }
+}

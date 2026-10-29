@@ -1,0 +1,147 @@
+{
+  "policy": "anthropic",
+  "groups": 10,
+  "accuracy": 0.8,
+  "tool_calls": 49,
+  "tool_errors": 0,
+  "tool_latency_ms_p50": 2.45,
+  "tool_latency_ms_p95": 4.04,
+  "model": "claude-sonnet-5-5",
+  "usage": {
+    "api_calls": 30,
+    "input_tokens": 55564,
+    "output_tokens": 5052
+  },
+  "rows": [
+    {
+      "world": 3,
+      "group": 0,
+      "pred": [
+        "dimm",
+        "node-89"
+      ],
+      "truth": [
+        "dimm",
+        "node-89"
+      ],
+      "ok": true
+    },
+    {
+      "world": 3,
+      "group": 1,
+      "pred": [
+        "switch",
+        "switch-7"
+      ],
+      "truth": [
+        "switch",
+        "switch-7"
+      ],
+      "ok": true
+    },
+    {
+      "world": 3,
+      "group": 2,
+      "pred": [
+        "fan",
+        "node-68"
+      ],
+      "truth": [
+        "fan",
+        "node-68"
+      ],
+      "ok": true
+    },
+    {
+      "world": 3,
+      "group": 3,
+      "pred": [
+        "ost",
+        "ost-2"
+      ],
+      "truth": [
+        "ost",
+        "ost-2"
+      ],
+      "ok": true
+    },
+    {
+      "world": 3,
+      "group": 4,
+      "pred": [
+        "ost",
+        "ost-3"
+      ],
+      "truth": [
+        "ost",
+        "ost-3"
+      ],
+      "ok": true
+    },
+    {
+      "world": 3,
+      "group": 5,
+      "pred": [
+        "fan",
+        "node-76"
+      ],
+      "truth": [
+        "fan",
+        "node-76"
+      ],
+      "ok": true
+    },
+    {
+      "world": 3,
+      "group": 6,
+      "pred": [
+        "fan",
+        "node-76"
+      ],
+      "truth": [
+        "benign",
+        null
+      ],
+      "ok": false
+    },
+    {
+      "world": 3,
+      "group": 7,
+      "pred": [
+        "dimm",
+        "node-111"
+      ],
+      "truth": [
+        "dimm",
+        "node-111"
+      ],
+      "ok": true
+    },
+    {
+      "world": 3,
+      "group": 8,
+      "pred": [
+        "dimm",
+        "node-114"
+      ],
+      "truth": [
+        "dimm",
+        "node-111"
+      ],
+      "ok": false
+    },
+    {
+      "world": 3,
+      "group": 9,
+      "pred": [
+        "dimm",
+        "node-71"
+      ],
+      "truth": [
+        "dimm",
+        "node-71"
+      ],
+      "ok": true
+    }
+  ]
+}
